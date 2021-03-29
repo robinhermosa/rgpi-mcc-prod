@@ -1,0 +1,89 @@
+{% load static %}
+<html>
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.min.css' %}"> {% endblock css %}
+
+<body>
+    <!-- Start: Projects Clean -->
+    <div class="projects-clean">
+        <div class="container">
+            <!-- Start: Intro -->
+            <div class="intro">
+                <h2 class="text-center" data-aos="zoom-in-up" style="font-family: Lato, sans-serif;">RGPI Mobile Command Center
+                </h2>
+                <p class="text-center" data-aos="zoom-in-up" style="font-family: Lato, sans-serif;">Turn data into information and information to insight </p>
+            </div>
+            <!-- End: Intro -->
+            <!-- Start: Projects -->
+            <div class="row projects">
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiOTk2MDBlYTctNmFjMi00OTMxLWJlMDktM2ZjMzhmZDFjMDRlIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><img class="img-fluid" src="{% static 'images/otr.jpg' %}"></a>
+                    <h3 class="name" style="font-family: Lato, sans-serif;font-size: 26px;">Daily Volume Tracking</h3>
+                    <p class="description"><br>This view indicates overall volume of total RGPI. It consists local segment view divided in different sheets, by customer and pending sheets to view per account transactions.
+                        <br><br></p><a href="https://app.powerbi.com/view?r=eyJrIjoiOTk2MDBlYTctNmFjMi00OTMxLWJlMDktM2ZjMzhmZDFjMDRlIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZWNhODMyMGUtMjA0ZC00OWNlLTkwOGItMTFlNDg1ZDdhNDkzIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSectiona5c990db06b2550c6556"><img class="img-fluid" src="{% static 'images/BO_Tracking.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">BO Tracking FY-2021<br></h3>
+                    <p class="description"><br>BO Tracking shows the BO Actual per month during the whole fiscal year. You can also track the gaps between months, and trends per segment.<br><br></p><a href="https://app.powerbi.com/view?r=eyJrIjoiZWNhODMyMGUtMjA0ZC00OWNlLTkwOGItMTFlNDg1ZDdhNDkzIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSectiona5c990db06b2550c6556"
+                        target="_blank"><i
+                            class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZDE5YjU1MjEtZjIyNy00MmM5LThmMzQtZGM4Yzk5MzJmNTMzIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><img class="img-fluid" src="{% static 'images/territorial.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">By Brand and Territorial Analytics<br></h3>
+                    <p class="description"><br>Territorial Tracking Report shows the covered area where RGPI distributes P&amp;G products throughout Luzon. It also shows which area has more customer we serve including new stores.
+                        <br><br></p><a href="https://app.powerbi.com/view?r=eyJrIjoiZDE5YjU1MjEtZjIyNy00MmM5LThmMzQtZGM4Yzk5MzJmNTMzIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZWZjMTViZDgtODdhZC00NDc2LWEwMjYtMTgwM2NjNTA4ZTViIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><img class="img-fluid" src="{% static 'images/covcom.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">Coverage Vs. Productivity<br></h3>
+                    <p class="description"><br>Coverage Compliance shows wether the seller is compliant or not, Also tracks the productivity calls.<br><br></p><a href="https://app.powerbi.com/view?r=eyJrIjoiZWZjMTViZDgtODdhZC00NDc2LWEwMjYtMTgwM2NjNTA4ZTViIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D"
+                        target="_blank"><i class="fa fa-arrow-circle-right"
+                            data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMmRlNWEyNjAtMGZjZS00OTQ4LWE3MzUtZTRiZTVjODI5YzYwIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSection1f4477f9d20ed07a398c" target="_blank"><img class="img-fluid" src="{% static 'images/hfs_golden_coins.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">HFS Golden Coins<br></h3>
+                    <p class="description"><br>Golden coins ranking view of seller<br><br>
+                    </p>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMmRlNWEyNjAtMGZjZS00OTQ4LWE3MzUtZTRiZTVjODI5YzYwIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSection1f4477f9d20ed07a398c" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble" style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiNmRiNTA4YTUtMGQ3MC00NWUzLTllZjMtNDM3Yjg2MGUwMDQ0IiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><img class="img-fluid" src="{% static 'images/KAIMR.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">KA IMR Dashboard<br></h3>
+                    <p class="description"><br>View of Golden Points summary for Key Accounts and Indirect Modern Retail reports
+                        <br><br></p><a href="https://app.powerbi.com/view?r=eyJrIjoiNmRiNTA4YTUtMGQ3MC00NWUzLTllZjMtNDM3Yjg2MGUwMDQ0IiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="#" onClick="myFunction()"><img class="img-fluid" src="{% static 'images/KATrade.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">KA Trade Inventory<br></h3>
+                    <p class="description"></p><a href="#" onClick="myFunction()"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZWE2NjUzY2UtOGJhMS00MWQ0LWExMGItM2I1MTE5OTNkYzBhIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSection38ed8e00a079e3580d56" target="_blank"><img class="img-fluid" src="{% static 'images/hfsnitro.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">HFS Nitro Tracking<br></h3>
+                    <p class="description"></p>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiZWE2NjUzY2UtOGJhMS00MWQ0LWExMGItM2I1MTE5OTNkYzBhIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSection38ed8e00a079e3580d56" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble" style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+                <div class="col-sm-6 col-lg-4 item" data-aos="fade-up" style="font-family: Lato, sans-serif;">
+                    <a href="#"><img class="img-fluid" src="{% static 'images/volume_cases.png' %}"></a>
+                    <h3 class="name" style="font-size: 26px;">Volume Cases Tracking<br></h3>
+                    <p class="description"><br>Case Tracking shows the daily distributed case to RGPI customer.<br><br></p>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiNjg1MTU2OGUtNWQ4Ni00N2ZiLTg4NWQtM2EyNjk5YjFkZWZmIiwidCI6IjExMjFhZGNjLWRhNzAtNGZhMC04N2Y3LTgwMmY0MWVlMzQ0ZSIsImMiOjEwfQ%3D%3D" target="_blank"><i class="fa fa-arrow-circle-right" data-bs-hover-animate="wobble"
+                            style="color: rgba(13,60,228,0.8);width: 20px;height: 20px;"></i></a>
+                </div>
+            </div>
+            <!-- End: Projects -->
+        </div>
+    </div>
+    <!-- End: Projects Clean -->
+</body>
+
+</html>

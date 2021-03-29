@@ -1,0 +1,93 @@
+{% load static %} {% load auth_extras %}
+
+<nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean-button">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="{% url 'home' %}" style="font-family: Poppins, sans-serif;font-size: 16px;">
+            <img src="{% static 'images/logo_mcc.png' %}" alt="" weight="40px" height="40px" class="d-inline-block">
+            RGPI MCC
+        </a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navcol-1">
+            <ul class="nav navbar-nav mr-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-hover-animate="pulse" href="{% url 'home' %}"
+                        style="font-family: Lato, sans-serif;font-size: 13px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-hover-animate="pulse" href="#"
+                        style="font-family: Lato, sans-serif;font-size: 13px;">GGC CRM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-hover-animate="pulse"
+                        href="https://system.netsuite.com/pages/customerlogin.jsp?country=US" target="_blank"
+                        style="font-family: Lato, sans-serif;font-size: 13px;">Netsuite</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-bs-hover-animate="pulse" href="{% url 'home' %}#downloadableContent"
+                        style="font-family: Lato, sans-serif;font-size: 13px;">Downloadable Contents</a>
+                </li>
+                <li class="nav-item dropdown" data-bs-hover-animate="pulse">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
+                        data-bs-hover-animate="pulse"
+                        style="font-family: Lato, sans-serif;font-size: 13px;">Others</a>
+                    <div class="dropdown-menu dropdown-menu-left">
+                        <a class="dropdown-item" href="https://apps.stackbox.xyz/login"
+                            target="_blank" style="font-family: Poppins, sans-serif;font-size: 13px;">Stackbox</a>
+                        <a class="dropdown-item" href="https://pandgapacimea.my.salesforce.com/" target="_blank"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Salesforce</a>
+                        <a class="dropdown-item" href="https://idistpngphilippines.ivymobileapps.com/web/Welcome"
+                            target="_blank" style="font-family: Poppins, sans-serif;font-size: 13px;">Ivy Mobility</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://121.58.236.114:9675/pro_users/login" target="_blank"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Spiceworks</a>
+                        <a class="dropdown-item" href="https://forms.gle/Xah4r7kBEi1v97dt9" target="_blank"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">IT Assistance</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" data-bs-hover-animate="pulse">
+                    {% if user|has_group:"Administrator" %}
+                    <a class="dropdown-toggle nav-link text-uppercase" data-toggle="dropdown" aria-expanded="false"
+                        data-bs-hover-animate="pulse" href="#" style="font-family: Lato, sans-serif;font-size: 13px;">
+                        {{ user }}</a>
+                    {% else %}
+                    <a class="dropdown-toggle nav-link text-uppercase" data-toggle="dropdown" aria-expanded="false"
+                        data-bs-hover-animate="pulse" href="#" style="font-family: Lato, sans-serif;font-size: 13px;">{{ user.get_full_name }}</a>
+                    {% endif %}
+                    <div class="dropdown-menu dropdown-menu-left">
+                        {% if user|has_group:"Administrator" %}
+                        <a class="dropdown-item" href="{% url 'profile_view' user.username %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'admin:index' %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Admin Panel</a>
+                        <a class="dropdown-item" href="{% url 'register' %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Add Account</a>
+                        <a class="dropdown-item" href="{% url 'account_view' %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">View Accounts</a>
+                        {% else %}
+                        <a class="dropdown-item" href="{% url 'profile_view' user.username %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'password_reset' %}" target="_blank"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Change Password</a>
+                        {% endif %}
+                        <!-- Start: - -->
+                        <div class="dropdown-divider"></div>
+                        <!-- End: - -->
+                        <a class="dropdown-item" href="{% url 'logout' %}"
+                            style="font-family: Poppins, sans-serif;font-size: 13px;">Sign Out</a>
+                    </div>
+                </li>
+                {% else %}
+                <span class="navbar-text actions"> <a class="btn btn-light action-button" role="button"
+                        href="{% url 'login' %}" style="font-family: Poppins, sans-serif;font-size: 13px;">Sign
+                        In</a></span> 
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!-- End: Navigation with Button -->

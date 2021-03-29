@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<title>{% block title %}RGPI MCC | Home{% endblock %}</title>
+{% block body_block %}
+    {% if user.is_authenticated %}
+        {% include 'carousel.html' %}
+        {% include 'dashboard_reports.html' %}
+        {% include 'downloadable.html' %}
+    {% else %}
+        {% include 'carousel.html' %}
+        {% include 'home.html' %}
+    {% endif %}
+{% endblock %}
+
