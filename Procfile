@@ -1,0 +1,1 @@
+web: gunicorn rgpi_mcc_dashboard.wsgi --log-file -
