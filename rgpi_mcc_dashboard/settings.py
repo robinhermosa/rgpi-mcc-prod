@@ -111,10 +111,10 @@ WSGI_APPLICATION = 'rgpi_mcc_dashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'deciebhl75nr92',
-        'USER': 'vetevicjisrrcl',
+        'NAME': 'd6eas431gt9mkq',
+        'USER': 'cnznhlismkdbuj',
         'PASSWORD': str(os.getenv('DB_PASS')),
-        'HOST': 'ec2-35-174-118-71.compute-1.amazonaws.com',
+        'HOST': 'ec2-54-196-33-23.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
