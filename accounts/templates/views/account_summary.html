@@ -1,0 +1,94 @@
+{% load static %}
+<div class="modal fade bd-example-modal-lg" id="user-details" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">User profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      {% for user_summary in user_summary %}
+      <div class="modal-body">
+        <div class="col-xs-12 col-sm-9">
+          <!-- User profile -->
+          <div data-aos="fade-right" class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title"></h4>
+            </div>
+            <div class="panel-body">
+              <div class="profile__avatar">
+                <img data-aos="fade-right" src="{{ user_summary.profile.image.url }}" alt="...">
+              </div>
+              <div class="profile__header">
+                <h4>{{ user_summary.get_full_name }}<small> {{ user_summary.groups.get }}</small></h4>
+                <p class="text-muted">
+                  Description Here
+                </p>
+                <p>
+                  <!-- <a href="#">bootdey.com</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- User info -->
+          <div data-aos="fade-right" class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">User info</h4>
+            </div>
+            <div class="panel-body">
+              <table class="table profile__table">
+                <tbody>
+                  <tr>
+                    <th><strong>Username</strong></th>
+                    <td>{{ user_summary.username }}</td>
+                  </tr>
+                  <tr>
+                    <th><strong>Email</strong></th>
+                    <td>{{ user_summary.email }}</td>
+                  </tr>
+                  <tr>
+                    <th><strong>Position</strong></th>
+                    <td>{{ user_summary.profile.department }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Community -->
+          <div data-aos="fade-right" class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Important Dates</h4>
+            </div>
+            <div class="panel-body">
+              <table class="table profile__table">
+                <tbody>
+                  <tr>
+                    <th><strong>Last Login</strong></th>
+                    <td>{{ user_summary.last_login }}</td>
+                  </tr>
+                  <tr>
+                    <th><strong>Created Date</strong></th>
+                    <td>{{ user_summary.date_joined }}</td>
+                  </tr>
+                  <tr>
+                    <th><strong>Is Active</strong></th>
+                    <td>{{ user_summary.is_active }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Cloase</button>
+            </div> -->
+    </div>
+  </div>
+</div>

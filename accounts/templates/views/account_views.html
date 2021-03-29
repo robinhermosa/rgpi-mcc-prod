@@ -1,0 +1,61 @@
+<!DOCTYPE html> {% extends 'base.html' %}{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}RGPI MCC | User Accounts{% endblock %}</title>
+
+    {% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap4.min.css"> 
+    {% endblock css %}
+</head>
+
+
+{% block body_block %}
+<br>
+<div class="container">
+    <a type="button" style="float: right;" class="btn btn-info add-new" href="{% url 'register' %}">
+        <i class="fa fa-plus"></i> 
+        Add New
+    </a>
+    <div data-aos="zoom-in-up" class="table-responsive">
+       
+        <table id="accountTable" class="table table-striped table-bordered dt-responsive nowrap table-sm"
+            style="width:100%">
+            <h4> User Accounts</h4>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"><i class="fa fa-user"></i> Name</th>
+                    <th scope="col"><i class="fa fa-sign-in"></i> Username</th>
+                    <th scope="col"><i class="fa fa-envelope"></i> Email</th>
+                    <th scope="col"><i class="fa fa-users"></i> Group</th>
+                    <th scope="col"><i class="fa fa-pencil-square"></i> Is Active</th>
+                    <th scope="col"><i class="fa fa-history"></i> Last Login</th>
+                    <th scope="col"><i class="fa fa-cogs"></i> Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% include 'includes/account_table.html' %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap4.min.js"></script>
+{% endblock javascript %} 
+</html>
