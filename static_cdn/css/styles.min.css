@@ -420,21 +420,21 @@
     }
 }
 
-.navigation-clean-button .navbar-brand {
+.navigation-clean-button {
     font-weight: 700;
     color: inherit
 }
 
-.navigation-clean-button .navbar-brand:hover {
+.navigation-clean-button {
     color: #222
 }
 
-.navigation-clean-button.navbar-dark .navbar-brand:hover {
+.navigation-clean-button.navbar-dark{
     color: #f0f0f0
 }
 
-.navigation-clean-button .navbar-brand img {
-    height: 100%;
+.navigation-clean-button  {
+    min-height: 100%;
     display: inline-block;
     margin-right: 10px;
     width: auto

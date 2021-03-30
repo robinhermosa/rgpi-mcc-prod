@@ -18,9 +18,9 @@
 body {
   padding-top: 70px;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 .card-image {
   position: relative;
 }
