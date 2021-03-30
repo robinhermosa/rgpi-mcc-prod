@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: 'googleRighteous';
+  src: local('googleRighteous'),
+       url('/static/fonts/Righteous-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'productSans';
+  src: local('productSans'),
+       url('/static/fonts/Product_Sans_Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'productSansBold';
+  src: local('productSansBold'),
+       url('/static/fonts/Product_Sans_Bold.ttf') format("truetype");
+}
+body {
+  padding-top: 70px;
+}
+/* html {
+  scroll-behavior: smooth;
+} */
+.card-image {
+  position: relative;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.5);
+}
+.card:hover .image-overlay {
+  opacity: 1;
+}
+p, #detailsBottom, #emailBottom, #dropdownMenu {
+  font-family: productSans;
+}
+h5, a {
+  font-family: productSansBold;
+}
+#headerBrand, #brandName, #brandBottom {
+  font-family: productSansBold;
+}
+#downloadIcon {
+  width: 70px;
+  height: 70px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
