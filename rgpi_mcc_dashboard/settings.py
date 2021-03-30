@@ -111,12 +111,13 @@ WSGI_APPLICATION = 'rgpi_mcc_dashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6eas431gt9mkq',
-        'USER': 'cnznhlismkdbuj',
-        'PASSWORD': str(os.getenv('DB_PASS')),
-        'HOST': 'ec2-54-196-33-23.compute-1.amazonaws.com',
+        'NAME': 'db_rgpi_mcc',
+        'USER': 'postgres',
+        'PASSWORD': '@dminRGPI',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
+    
 }
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -156,6 +157,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
