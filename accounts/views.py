@@ -93,7 +93,7 @@ def PasswordResetRequest(request):
                     email_template_name = "accounts/password_reset_email.txt"
                     c = {
                     "email":user.email,
-                    'domain':'https://rgpi-mcc-dashboard.herokuapp.com/',
+                    'domain':'https://rgpi-mcc-dashboard.herokuapp.com',
                     'site_name': 'Website',
                     "uid": urlsafe_base64_encode(force_bytes(user.pk)),
                     "user": user,
